@@ -6,6 +6,7 @@ import { RDF } from '../../../util/Vocabularies';
 import type { RepresentationMetadata } from '../../representation/RepresentationMetadata';
 import type { MetadataParser } from './MetadataParser';
 
+// TODO: This class should be changed to `LinkRelParser` and take a map as input just like `LinkRelMetadataWriter`
 /**
  * Parses Link headers with "rel=type" parameters and adds them as RDF.type metadata.
  */

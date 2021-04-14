@@ -23,13 +23,24 @@
       "@id": "urn:solid-server:default:ResourceStore_Locking",
       "@type": "LockingResourceStore",
       "source": {
-        "@id": "urn:solid-server:default:ResourceStore_Patching"
+        "@id": "urn:solid-server:default:ResourceStore_ShapeTrees"
       },
       "locks": {
         "@id": "urn:solid-server:default:ResourceLocker"
       },
       "strategy": {
         "@id": "urn:solid-server:default:AuxiliaryStrategy"
+      }
+    },
+
+    {
+      "@id": "urn:solid-server:default:ResourceStore_ShapeTrees",
+      "@type": "ShapeTreeStore",
+      "source": {
+        "@id": "urn:solid-server:default:ResourceStore_Patching"
+      },
+      "shapeStorage": {
+        "@type": "CachedWebStorage"
       }
     },
 

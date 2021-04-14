@@ -112,6 +112,12 @@ export const RDF = createUriAndTermNamespace('http://www.w3.org/1999/02/22-rdf-s
   'type',
 );
 
+// TODO: these values are probably not correct
+export const SHAPE = createUriAndTermNamespace('http://VALID-SHAPE-NAMESPACE/',
+  'hasShape',
+  'supportsShapes',
+);
+
 export const VANN = createUriAndTermNamespace('http://purl.org/vocab/vann/',
   'preferredNamespacePrefix',
 );

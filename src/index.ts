@@ -227,6 +227,7 @@ export * from './storage/conversion/RepresentationConverter';
 export * from './storage/conversion/TypedRepresentationConverter';
 
 // Storage/KeyValue
+export * from './storage/keyvalue/CachedWebStorage';
 export * from './storage/keyvalue/ExpiringStorage';
 export * from './storage/keyvalue/JsonFileStorage';
 export * from './storage/keyvalue/JsonResourceStorage';
@@ -265,6 +266,7 @@ export * from './storage/ReadOnlyStore';
 export * from './storage/RepresentationConvertingStore';
 export * from './storage/ResourceStore';
 export * from './storage/RoutingResourceStore';
+export * from './storage/ShapeTreeStore';
 
 // Util/Errors
 export * from './util/errors/BadRequestHttpError';
