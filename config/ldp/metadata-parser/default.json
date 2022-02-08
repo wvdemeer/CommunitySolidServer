@@ -1,10 +1,10 @@
 {
   "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^3.0.0/components/context.jsonld",
   "import": [
-    "files-scs:config/ldp/metadata-parser/parsers/content-type.json",
-    "files-scs:config/ldp/metadata-parser/parsers/content-length.json",
-    "files-scs:config/ldp/metadata-parser/parsers/slug.json",
-    "files-scs:config/ldp/metadata-parser/parsers/link.json"
+    "scs:config/ldp/metadata-parser/parsers/content-type.json",
+    "scs:config/ldp/metadata-parser/parsers/content-length.json",
+    "scs:config/ldp/metadata-parser/parsers/slug.json",
+    "scs:config/ldp/metadata-parser/parsers/link.json"
   ],
   "@graph": [
     {

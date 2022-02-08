@@ -1,12 +1,12 @@
 {
   "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^3.0.0/components/context.jsonld",
   "import": [
-    "files-scs:config/ldp/handler/components/authorizer.json",
-    "files-scs:config/ldp/handler/components/error-handler.json",
-    "files-scs:config/ldp/handler/components/operation-handler.json",
-    "files-scs:config/ldp/handler/components/operation-metadata.json",
-    "files-scs:config/ldp/handler/components/request-parser.json",
-    "files-scs:config/ldp/handler/components/response-writer.json"
+    "scs:config/ldp/handler/components/authorizer.json",
+    "scs:config/ldp/handler/components/error-handler.json",
+    "scs:config/ldp/handler/components/operation-handler.json",
+    "scs:config/ldp/handler/components/operation-metadata.json",
+    "scs:config/ldp/handler/components/request-parser.json",
+    "scs:config/ldp/handler/components/response-writer.json"
   ],
   "@graph": [
     {
