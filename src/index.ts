@@ -94,6 +94,7 @@ export * from './http/output/error/RedirectingErrorHandler';
 export * from './http/output/error/SafeErrorHandler';
 
 // HTTP/Output/Metadata
+export * from './http/output/metadata/AllowAcceptMetadataWriter';
 export * from './http/output/metadata/ConstantMetadataWriter';
 export * from './http/output/metadata/LinkRelMetadataWriter';
 export * from './http/output/metadata/MappedMetadataWriter';

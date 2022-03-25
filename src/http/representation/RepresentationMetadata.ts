@@ -258,6 +258,18 @@ export class RepresentationMetadata {
   }
 
   /**
+   * Verifies if a specific triple can be found in the metadata.
+   * Undefined parameters are interpreted as wildcards.
+   */
+  public has(
+    predicate: NamedNode | string | null = null,
+    object: NamedNode | BlankNode | Literal | string | null = null,
+    graph: MetadataGraph | null = null,
+  ): boolean {
+    return this.store.countQuads(this.id, predicate, object, graph) > 0;
+  }
+
+  /**
    * Finds all object values matching the given predicate and/or graph.
    * @param predicate - Optional predicate to get the values for.
    * @param graph - Optional graph where to get from.

@@ -34,7 +34,9 @@
   ],
   "@graph": [
     {
-      "comment": "A single-pod server that stores its resources on disk."
+      "@type": "SearchListener",
+      "eventEmitter": { "@id": "urn:solid-server:default:ResourceStore" },
+      "store": { "@id": "urn:solid-server:default:ResourceStore" }
     }
   ]
 }
