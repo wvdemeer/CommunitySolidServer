@@ -1,16 +1,9 @@
 import { FoundHttpError } from '../../../../src/util/errors/FoundHttpError';
-import type { HttpErrorOptions } from '../../../../src/util/errors/HttpError';
 import { MovedPermanentlyHttpError } from '../../../../src/util/errors/MovedPermanentlyHttpError';
-import { RedirectHttpError } from '../../../../src/util/errors/RedirectHttpError';
-
-class FixedRedirectHttpError extends RedirectHttpError {
-  public constructor(location: string, message?: string, options?: HttpErrorOptions) {
-    super(0, location, '', message, options);
-  }
-}
+import type { RedirectHttpErrorClass } from '../../../../src/util/errors/RedirectHttpError';
 
 describe('RedirectHttpError', (): void => {
-  const errors: [string, number, typeof FixedRedirectHttpError][] = [
+  const errors: [string, number, RedirectHttpErrorClass][] = [
     [ 'MovedPermanentlyHttpError', 301, MovedPermanentlyHttpError ],
     [ 'FoundHttpError', 302, FoundHttpError ],
   ];

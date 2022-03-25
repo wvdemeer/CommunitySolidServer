@@ -1,7 +1,7 @@
 import { BasicRepresentation } from '../../http/representation/BasicRepresentation';
 import type { Representation } from '../../http/representation/Representation';
 import { APPLICATION_JSON } from '../../util/ContentTypes';
-import { RedirectHttpError } from '../../util/errors/RedirectHttpError';
+import { isRedirectHttpError } from '../../util/errors/RedirectHttpError';
 import type { InteractionHandlerInput } from './InteractionHandler';
 import { InteractionHandler } from './InteractionHandler';
 
@@ -38,7 +38,7 @@ export class LocationInteractionHandler extends InteractionHandler {
     try {
       return await this.source.handle(input);
     } catch (error: unknown) {
-      if (RedirectHttpError.isInstance(error)) {
+      if (isRedirectHttpError(error)) {
         const body = JSON.stringify({ location: error.location });
         return new BasicRepresentation(body, input.operation.target, APPLICATION_JSON);
       }

@@ -19,7 +19,7 @@ import type { ResponseWriter } from '../../http/output/ResponseWriter';
 import { BasicRepresentation } from '../../http/representation/BasicRepresentation';
 import type { KeyValueStorage } from '../../storage/keyvalue/KeyValueStorage';
 import { InternalServerError } from '../../util/errors/InternalServerError';
-import { RedirectHttpError } from '../../util/errors/RedirectHttpError';
+import { isRedirectHttpError } from '../../util/errors/RedirectHttpError';
 import { joinUrl } from '../../util/PathUtil';
 import type { InteractionHandler } from '../interaction/InteractionHandler';
 import type { AdapterFactory } from '../storage/AdapterFactory';
@@ -282,7 +282,7 @@ export class IdentityProviderFactory implements ProviderFactory {
         try {
           await this.interactionHandler.handleSafe({ operation, oidcInteraction });
         } catch (error: unknown) {
-          if (RedirectHttpError.isInstance(error)) {
+          if (isRedirectHttpError(error)) {
             return error.location;
           }
           throw error;

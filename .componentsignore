@@ -1,11 +1,13 @@
 [
   "Adapter",
+  "BaseHttpError",
   "BasicConditions",
   "BasicRepresentation",
   "Error",
   "EventEmitter",
   "HttpErrorOptions",
   "Permission",
+  "RedirectHttpError",
   "Template",
   "TemplateEngine",
   "ValuePreferencesArg",
